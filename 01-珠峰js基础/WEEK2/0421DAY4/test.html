@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // es6解构赋值
+    
+        // let ary = [1,2,3,4,5];
+        // let [...obj] = ary 
+        // console.log();
+        // console.log(ary);
+
+        // let obj = {name:"a",b:"c"};
+        // let {name,b,c=1} = obj
+        // console.log(name,b,c);
+
+        
+        // let obj = {name:"a",b:"c"};
+        // let {d:b} = obj
+        // console.log(d);
+
+//         let obj = {name: 'xxx', age: 27};
+//         let ary = [1,2,3]
+        
+// let  {name} = obj;//=>展开运算符
+// console.log(name);
+
+    // var obj = {name :'AA',age:'bb'};
+    // var {name1:name,age:cc} =obj
+    // console.log(name1)
+
+
+
+        
+// let ary = [12, 23];
+// let obj = {name:"aa",age:12, sex:"sex"}
+// let newObj = {...obj,...ary};
+// console.log(newObj)
+
+
+// let newAry = [...ary, 34];
+// console.log(newAry);
+
+// let [...arr] = ary;
+// console.log(arr);
+
+
+function name() {
+    var score = [].slice.call(arguments);
+    console.log(score)
+    score.sort (function (a,b) {
+        return a-b;
+        
+    }).pop();;
+    score.shift();
+
+    return eval(score.join("+") )/ score.length;
+    // let newAry = [].slice.call(arguments);//=>前提是我们改变的THIS是一个和数组类似的结构(有索引有LENGTH)
+   
+    // newAry.sort(function (a, b) {
+    //     return a - b;
+
+   
+
+    
+}
+ console.log(name(1,29,3,4));
+    </script>
+</body>
+</html>

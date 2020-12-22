@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 函数的防抖:
+    例如电梯，电梯门会有红外线，如果有人想进去，那么就会在三秒钟后关闭，每次有人点进去都会等三秒，把前面的等待事件清除掉
+ 函数做一件事，不是立即去做，而是等待一段事件后去做，如果一段时间又做了 那么就会清除前面的，
+ 比如百度的input事件，文本框内容发生变化，
+ -->
+    <input type="text" />
+    <script>
+      var oInput = document.querySelector("input");
+
+      function debounce(callback, time) {
+        var timer;
+        // console.log();z
+        return function () {
+          clearTimeout(timer);
+          // console.log();
+          // console.log(arguments);
+          timer = setTimeout(() => {
+            console.log(arguments);
+            callback.apply(null,arguments);
+          }, time);
+        };
+      }
+      var handle = debounce(function () {
+        // console.log(width);
+        // console.log(width);
+        console.log(arguments);
+      }, 1000);
+      //   window.onresize = function () {
+      //     handle(document.documentElement.clientWidth);
+      //   };
+      oInput.oninput = function () {
+        handle(1);
+      };
+    </script>
+  </body>
+</html>

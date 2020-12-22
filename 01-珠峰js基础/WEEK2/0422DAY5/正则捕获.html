@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 
+        正则捕获：把一个字符串和正则匹配的部分获取到
+        【正则】exec test
+        基于exec可以实现正则的捕获
+        1.如果当前正则和字符串不匹配 ，捕获的结果为欸null
+        2.如果匹配，捕获的结果是一个数组
+        0：大正则的捕获的内容
+        index：正则捕获的起始所引
+        input：原始操作的字符串
+        。。。
+        3.执行一次exec只能捕获到第一个和正则匹配的内容，其余匹配的内容还没有捕获到
+        而且更恶心的是 傻傻执行多次也没有用=》正则的捕获有懒惰性“只能捕获到第一次的匹配的内容 剩余的默认捕获不到”
+
+        解决正则捕获的懒惰性，我们需要加全局修饰符G (这个是唯一的方案 而且不加G不过我们用什么方法捕获，也不能把全部匹配的捕获到)
+        
+
+
+
+        字符串：
+        replace
+        split
+        match
+     -->
+    <script>
+        // last-index不变导致了正则的懒惰性
+        // let str ='zhang198765zhuozzc1234';
+        // let reg = /\d+/;
+        // console.log(reg.test('str'));//true
+
+        // console.log(reg.exec('zhangzhuozzc'));//null
+
+        // console.log(reg.exec(str));//
+        // console.log(reg.lastIndex);//0 正则捕获的时候 下一次在字符串中开始查找的索引
+        // console.log(reg.exec(str));
+        // console.log(reg.lastIndex);
+
+        // 即使手动修改了last Index然而也没有什么用
+        // console.log(reg.exec(str));//
+        // reg.lastIndex=11;
+        // console.log(reg.lastIndex);
+        // console.log(reg.exec(str));
+
+
+        // let str = 'zhang198765zhuozzc1234';
+        // let reg = /\d+/g;
+        // console.log(reg.lastIndex);
+        // console.log(reg.exec(str));
+        // console.log(reg.lastIndex);
+        // console.log(reg.exec(str));
+        // console.log(reg.lastIndex);
+        // console.log(reg.exec(str));
+        // console.log(reg.lastIndex);
+        // console.log(reg.exec(str));
+
+
+        // let str = 'zhang198765zhuqwe345ozzc1234';
+        // let reg = /\d+/g;
+        // console.log(reg.lastIndex);
+        // console.log(reg.exec(str));
+
+
+        RegExp.prototype.myExecALl = function (str) {
+            // this:当前操做的正则
+            // str 我们要捕获的字符串
+            // 执行exec开始捕获,具体捕获多少次不确定 但是一直捕获不到内容null为止 期间不捕获到的内容存储到数组中
+            // 为了防止出现死循环，我们检测是否加G
+            if (!this.global) {
+                return this.exec(str);
+            }
+            let result = [],
+                valAry = this.exec(str);
+            while (valAry) {//this.lastIndex<str.length
+                result.push(valAry[0]);
+                valAry = this.exec(str);
+            }
+            return result;
+
+        }
+        reg.myExecALl();
+
+        console.log(str.myExecALl(reg));//实现了我们自己编写的exec-all处理的实行  
+
+// 贪婪性；每一次匹配捕获的时候，总是捕获到的正则匹配中最长的内容
+// 例如''1'符合\d+  '2018'也符合\d+ 但是捕获的内容是2018
+
+/*
+* ？在正则中的作用 
+1.量词元字符 ：出现零次或者一次
+/-？/让-号出现一次或者不出现
+
+2.取消贪婪性
+/\d+?/捕获的时候只捕获最短的匹配内容
+3.？：只匹配 不捕获
+4. ？=正向预查
+5.？！负向预查
+
+
+        let str = 'zhang98765zhuqwe345ozzc1234';
+        let reg = /\d+/g;
+        // /\d+?/g把问号放在两次元字符后面 代表就不是出现零次或者因此 而且取消了捕获的贪婪性
+
+
+        console.log(reg.exec(str));
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let obj = { a: 1, b: 1 };
+      function clone(obj,deep) {
+        if (Array.isArray(obj)) {
+            if(deep){
+                var newArr = [];
+                for (let i = 0; i < obj.length; i++) {
+                    newArr.push(this.clone(obj[i],deep ))
+                    
+                }
+            }
+          return obj.slice();
+        } else if (typeof obj === "object") {
+          const newObj = {};
+          for (let prop in obj) {
+              if (deep) {
+               this.clone(obj[prop],deep)   
+              }
+            newObj[prop] = obj[prop];
+          }
+          return newObj;
+        }
+      }
+      let a = clone(obj,true);
+        console.log(a);
+    </script>
+  </body>
+</html>

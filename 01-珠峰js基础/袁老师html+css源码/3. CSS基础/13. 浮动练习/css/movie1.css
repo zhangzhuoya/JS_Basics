@@ -1,0 +1,114 @@
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+.main{
+    line-height: 1.5;
+}
+.main .nav{
+    color:  #999;
+    background-color:#47464a;
+    text-align: center;
+    height: 60px;
+    line-height: 60px;
+   
+}
+.main .nav a{
+     padding-left: 20px;
+}
+.main .nav a:hover{
+    color: aliceblue;
+}
+.main .nav a.select{
+    color: chocolate;
+}
+
+.main .container{
+    width: 1200px;
+    margin: 0 auto;
+}
+.main .container .choose-area{
+    border: 1px solid #e5e5e5;
+    margin: 30px 0;
+    padding: 0 30px;
+
+}
+.main .container .choose-area .choose-item{
+    margin: 0 10px;
+    border-bottom: 1px dotted #008c8c;
+
+}
+.main .container .choose-area .choose-item.no-line {
+    border: none;
+}
+.main .container .choose-area .choose-item .right{
+    float: left;
+    width: 1050px;
+
+}
+.main .container .choose-area .choose-item .left{
+    float: left;
+    width:60 px;
+}
+.main .container .choose-area .choose-item .right li{
+    float: left;
+    padding: 0 5px;
+    
+}
+.main .container .choose-area .choose-item .right li a{
+    margin:0 5px;
+}
+
+.main .container .choose-area .choose-item .right li a:hover{
+    color: crimson;
+
+}
+.main .container .choose-area .choose-item .right li a.select{
+    background-color: red;
+    color: aliceblue;
+    border-radius:15px;
+}
+.main .container .movie{
+    width: 1200px;
+}
+.main .container .movie .movie-item{
+    float: left;
+    width: 120px;
+    margin: 16px 51px 6px 0px;
+}
+.main .container .movie .movie-item .poster img{
+    width: 160px;
+    height: 220px;
+    border:1px;
+}
+.main .container .movie .movie-item:nth-child(7n){
+    margin-right: 0;
+}
+.main .container .movie .movie-item .name{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+/* 多页面的通用样式 */
+
+.pager{
+    margin: 2em 0;
+    text-align: center;
+}
+
+.pager a{
+    border: 1px solid #d8d8d8;
+    padding: 5px 10px;
+    margin: 0 3px;
+}
+
+.pager a:hover{
+    border-color: #ef4238;
+}
+
+.pager a.select{
+    background: #ef4238;
+    color:#fff;
+    border: none;
+}

@@ -1,0 +1,24 @@
+/* *{ 
+    color: brown;
+} */
+/* [href]{
+    color: red;
+} */
+[href="https://www.sina.com"]{
+    color: red;
+}
+[href="https://www.baidu.com"]{
+    color: aquamarine;
+}
+.b{
+    color: green;
+}
+/* a:active{
+    color:red;
+} */
+a:visited{
+    color:rgb(21, 6, 36);
+}
+a:link{
+    color:rgb(68, 68, 17);
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>   // console.log(productData);
+
+//转化为json格式
+//  JSON.parse('{"name":"ss"}')
+// {name: "ss"}
+// JSON.stringify({name:'xx'})
+// "{"name":"xx"}"
+        //获取数据
+        ~(function(){
+            let xhr = new XMLHttpRequest();
+        let productData = null;
+        xhr.open('GET','../json/product.json',false)
+        xhr.onreadystatechange =()=>{
+            if(xhr.readyState==4 && xhr.status==200){
+                productData = JSON.parse(xhr.responseText);
+
+            }
+
+        }
+        xhr.send(null);
+        let str =``;
+        let list = document.getElementById('list');
+        let {
+            title,
+            img,
+            price,
+
+        } = productData[index];
+           for (let index = 0; index < productData.length; index++) {
+            str +=`<li><a href="javascript:;">
+            <img src= "${img}"alt="">
+            <p>${title}</p>
+            <span>${price}</span>
+             </a></li>`;
+            
+        }  
+        list.innerHTML('str');
+        })();
+        
+    </script>
+</body>
+</html>

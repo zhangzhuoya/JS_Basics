@@ -1,0 +1,16 @@
+{
+  "id": "1448175",
+  "name": "text项目图标",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "2870844",
+      "name": "张",
+      "font_class": "zhang",
+      "unicode": "e628",
+      "unicode_decimal": 58920
+    }
+  ]
+}

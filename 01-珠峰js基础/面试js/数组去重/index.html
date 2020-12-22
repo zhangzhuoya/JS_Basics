@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //  第一种方法,使用第三方库，underscore.js
+
+      // 2. 使用es6 set方法
+      //     const arr = [1,21,2,3,54,54,3,3,4,4]
+
+      //     function qArray() {
+      //     // var result = Array.from(new Set(arr))
+      //     // 使用展开运算符
+      //   var result = [...new Set(arr)]
+      //         console.log(result);
+      //     }
+      //     qArray(arr)
+
+      //   // 3. 使用indexOf
+
+      //   const arr = [1, 2, 33, 4, 4, 5, 55];
+      //   function qArray() {
+      //     const result = [];
+      //     arr.forEach((item) => {
+      //       if (result.indexOf(item)=== -1) {
+      //           result.push(item)
+      //       }
+      //     });
+      //     console.log(result);
+      //   }
+      //   qArray(arr)
+
+      //   利用数组下标
+      //   const arr = [1, 2, 33, 4, 4, 5, 55];
+
+      //   function qArray() {
+      //     var result = [];
+      //     result = arr.filter((item, index) => {
+      //       return arr.indexOf(item) === index;
+      //     });
+      //     console.log(result);
+      //   }
+      //   qArray(arr);
+
+      // 使用reduce
+
+      //   const arr = [1, 2, 33, 4, 4, 5, 55];
+
+      //   function qArray() {
+      //     var result = [];
+      //     result = arr.reduce((pre, item) => {
+      //       console.log(pre, item);
+      //       return pre.includes(item) ? pre : [...pre, item];
+      //     },[]);
+      //     console.log(result);
+      //   }
+      //   qArray(arr);
+
+      // 根据key值唯一
+
+      const arr = [1, 2, 33, 4, 4, 5, 55];
+
+      function qArray() {
+        var result = {};
+        arr.forEach((item) => {
+          result[item] = "ss";
+        });
+        //   Object.keys(item)
+        // console.log(Object.keys(result);
+        // result = Object.keys(result)
+        const ar=[]
+        result = Object.keys(result);
+        
+        result.forEach((item) =>{ 
+            item = ~~item;
+            ar.push(item)
+            
+            });
+        console.log(ar);
+      }
+      qArray(arr);
+    </script>
+  </body>
+</html>

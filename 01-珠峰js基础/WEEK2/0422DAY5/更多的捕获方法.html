@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // let str = 'zhang98765zhuqwe345ozzc1234';
+        // let reg = /\d+/g;
+        // console.log(str.test(str));//true
+        // console.log(reg.lastIndex);//11基于test进行匹配的时候 如果设置了G test匹配相当于捕获，修改了last-index的值
+        // console.log(reg.exec(str));//['345']
+        
+        // let str ='zhangzhuo143';
+        // let reg = /\d+/g;
+        // console.log(reg.exec(str));
+        // console.log(reg.exec('zhagnghzu111234234'));//"234234"
+        // // 虽然捕获的不是同一个字符串 但是捕获的是同一个 大红一次正则处理的时候修改了 他的lastindex值
+        // 也会对下一次匹配的心字符串产生影响m
+        
+        
+        // let str = 'zhangzhuo2018hh2019';
+        // let reg = /(\d+)/g;
+        // console.log(reg.test(str));//true
+
+        // console.log(RegExp.$1);//2018
+        // // 把上一次匹配的test/exec到的结果获取到 获取的是第一个小分组的匹配内容 大正则匹配的内容无法获取到
+        // // 他是全局的值 其他正则操作会覆盖这个值 这种方式没什么用
+
+        // console.log(reg.test(str));//true
+        // console.log(RegExp.$1);//2019
+        // console.log(reg.test(str));//false
+        // console.log(RegExp.$1);
+        // console.log(reg.test(str));
+        // console.log(RegExp.$1);
+
+
+
+        // replace：实现正则捕获方法（本身是字符串的替换）
+        // 真实项目中居于正则替换
+        // let str = 'zhangzhuo2018hh2019';
+        // str = str.replace('zhangzhuo','zhnagzhuo123');
+        // console.log(str);
+        // str = str.repeat('zhangzhuo','zhangzhuo123');
+        // console.log(str);
+
+        // str = str.replace(/zhangzhuo/g,'zhangzhuo22');
+        // console.log(str);
+
+
+        // replace原理
+        let str = 'zhangzhuo{val:2018}hh{val:2019}',
+        reg = /{val:(\d+)\}/g;
+        // str = str.replace(reg,'@');
+        // 用reg正则匹配和str自古穿进行匹配，匹配几次就替换几次每次都是把当前‘大正则’匹配的结果用第2个穿戴的字符串替换掉了
+        // str = str.replace(reg,'$1');
+        // 不是拿这个字符串替换掉大正则匹配的内容，此处的￥1代表的是第一个分组匹配的内容 等价于regExp.$1
+
+// reg和str匹配多少次函数就被触发执行多少次 而且传递了一些参数信息值
+// 2.每一次arg中存储的信息 和执行exec捕获的信息相似（内置原理，每一次正则匹配的结果 都把函数执行 然后基于exec把本次匹配的信息捕获到，然后把捕获的信息传递给这个函数）
+// 每一次函数中返回的是啥 就把当前大正则匹配的内容替换成啥 
+str = str.replace(reg,(...reg)=>{
+     console.log(arg);
+     return 'aa';
+ })
+ console.log(str);
+ 
+        
+        
+
+
+
+        
+        
+    </script>
+</body>
+</html>

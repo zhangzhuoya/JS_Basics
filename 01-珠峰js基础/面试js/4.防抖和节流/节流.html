@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //  保证一段事件内执行一次，等到动作结束后在执行
+      function throttle(callback, time, immediately) {
+        if (immediately === undefined) {
+          immediately = true;
+        }
+        if (immediately) {
+          var t;
+          return function () {
+            if (!t || Date.now() - t >= time) {
+              callback();
+              t = Date.now();
+            }
+          };
+        } else {
+          var timer;
+          return function () {
+            if (timer) {
+              return;
+            }
+            timer = setTimeout(() => {
+              callback();
+              timer = null;
+            }, time);
+          };
+        }
+      }
+      var handle = throttle(function () {
+        console.log("q");
+      }, 1000);
+      window.onresize = function () {
+        handle();
+      };
+    </script>
+  </body>
+</html>

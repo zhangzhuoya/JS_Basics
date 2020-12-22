@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    console.log(a, b, c);//=>undefined * 3
+var a = 10,
+    b = 10,
+    c = 10;
+
+function fn() {
+    console.log(a, b, c);//=>10 ud 10
+    var b = a = c = 100;
+    console.log(a, b, c);//=>100 * 3
+}
+
+fn(10, 20);
+console.log(a, b, c);//=>100 10 100*/
+    </script>
+</body>
+</html>

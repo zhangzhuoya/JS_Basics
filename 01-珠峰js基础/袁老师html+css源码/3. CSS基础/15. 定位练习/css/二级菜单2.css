@@ -1,0 +1,51 @@
+.clearfix::after {
+        content: "";
+        display: block;
+        clear: both;
+    }
+.header .top-nav{
+border: 2px solid;
+background: #e3e4e5;
+color: #999;
+height: 40px;
+line-height: 40px;
+box-sizing: border-box;
+}
+
+.header .top-nav>li{
+    float: left;
+    height: 40px;
+    width: 150px;
+    text-align: center;
+    background: burlywood;
+    position: relative;
+}
+.header .top-nav>li:hover{
+    border: 2px solid rebeccapurple;
+    background-color: #fff;
+    border-bottom: none;
+    height: 36px;
+}
+.header .top-nav .subman {
+    text-align: left;
+    line-height: 1.5;
+    width: 300px;
+    display: none;
+    
+    position: absolute;
+    background-color:white;
+
+}
+.header .top-nav li:hover .subman{
+display: block;
+} 
+.header .top-nav>li::after{
+    contain: "";
+    position: absolute;
+    width: 100%;
+    height: 5px;
+    background: red;
+    bottom: 0;
+    left: 0;
+    background: #fff;
+}

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let str = 'zhangzhuo{1234}ahdd{0099}cjxkzxccj{6677}';
+        let reg = /\{(\d+)\}/g;//大括号有特殊含义 {N}出现的次数
+        console.log(reg.exec(str));//['{1234}',]在正则捕获的时候，如果正则中存在分组，捕获的时候不仅把
+        // 大正则匹配的字符捕获到（数组第一项），而且把小分组匹配的内容也会单独抽取出来（数组中第2项 开始就是小愤怒捕获的内容哦那个）：分组捕获
+        // 而 /\{(？:\d+)\}/g;是组织分组捕获的，值匹配 不捕获
+
+        console.log(str.match(str));//也有自己的局限性，在正则设置了G的情况下 基于match捕获的内容只有大正则匹配的 小分组的内容没有单独抽取出来
+        // 不设置g的 和exec一样
+        
+        
+
+    </script>
+</body>
+</html>

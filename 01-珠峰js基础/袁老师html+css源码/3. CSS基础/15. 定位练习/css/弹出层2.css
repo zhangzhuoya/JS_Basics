@@ -1,0 +1,37 @@
+.main img{
+    width: 100%;
+}
+.modal{
+   position: fixed;
+   right: 0px;
+   top:0px;
+   width: 100%;
+   height: 100%;
+   background:rgba(0,0, 0, .5);
+
+}
+.container{
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background: white;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    top: 0px;
+    margin: auto;
+}
+.modal .container .close{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    right: -15px;
+    top: -15px;
+    background: red;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 50%;
+    cursor: pointer;  
+
+    
+}

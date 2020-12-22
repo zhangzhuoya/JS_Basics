@@ -1,0 +1,47 @@
+body {
+    background-color: #4d4a40;
+
+}
+.container{ 
+      background-color: #fff;
+      width: 90%;
+      margin: 0 auto;
+      padding: 30px 0;
+}
+.container header{
+    background:#267890;
+    border: 5px solid #14414e ;
+    color:#fff;
+    text-align:center;
+   
+    margin-left: -32px;
+    margin-right:-32px;
+}
+.container header .h1{
+    font-size: 32px;
+    font-weight: bold;
+}
+.container header .h2{
+    text-align:center;
+    padding-bottom: 24px;
+}
+.container header .h2 a{
+   text-decoration: underline;
+
+}
+.container header .h2 a:hover{
+    color:#DBDBDB;
+}
+.container section{
+    width: 90%;
+    margin: 0 auto;
+
+}
+.container section h2{
+    font-size: 32px;
+    font-weight:bold;
+    border-top:1px;
+}
+.container section p{
+    margin: 1em 0;
+}

@@ -1,0 +1,296 @@
+/**网页头部**/
+
+.header {
+    width: 1648px;
+    height: 90px;
+}
+
+
+/**网页头部结束**/
+
+
+/**公共样式**/
+
+.header .container {
+    width: 950px;
+    height: 32px;
+    margin: 0 auto;
+    padding-top: 30px;
+}
+
+.header .container .logon-left {
+    width: 154px;
+    height: 30pix;
+    float: left;
+}
+
+.header .container .logon-left h1 a {
+    width: 154px;
+    height: 30px;
+    display: block;
+    background: url("../imgs/logo_db.png");
+}
+
+.header .container .logon-left h1 span {
+    display: none;
+}
+
+.header .search {
+    float: left;
+}
+
+.header .search {
+    width: 270px;
+    height: 30px;
+    box-sizing: border-box;
+    margin-left: 10px;
+}
+
+.header .search form {
+    position: relative;
+    width: 270px;
+    height: 30px;
+    border: 1px solid #a2a5a5;
+    box-sizing: border-box;
+}
+
+.header .search .txt {
+    width: 220px;
+    height: 20px;
+    margin-top: 4px;
+    font-size: 13px;
+}
+
+.header .search form button {
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+}
+
+i {
+    font-size: 3em;
+}
+
+header .container .item-right {
+    float: left;
+}
+
+header .container .item-right a {
+    float: left;
+    width: 40px;
+    height: 20px;
+    background: url("../imgs/nav_logo\ copy.png") no-repeat left top/463px 20px;
+    margin-left: 20px;
+    margin-top: 5px;
+}
+
+header .container .item-right .read {
+    background-position: 0px 0px;
+}
+
+header .container .item-right .movie {
+    background-position-x: -60px;
+}
+
+header .container .item-right .music {
+    background-position-x: -120px;
+}
+
+header .container .item-right .group {
+    background-position-x: -182px;
+}
+
+header .container .item-right .FM {
+    background-position: -240px;
+}
+
+header .container .item-right .city {
+    background-position-x: -300px;
+}
+
+header .container .item-right .things {
+    background-position-x: -360px;
+}
+
+header .container .item-right .douban {
+    background-position-x: -400px;
+}
+
+.banner {
+    background: url(../imgs/banner-bg.jpg) no-repeat 120px top/auto 100% #edf4ed;
+    width: 1895px;
+    height: 350px;
+}
+
+.banner .container {
+    width: 950px;
+    height: 350px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.banner .container .left-loginarea {
+    width: 180px;
+    height: 200px;
+    left: 468px;
+    bottom: 0px;
+    position: absolute;
+}
+
+.banner .container .left-loginarea .login-nav {
+    width: 150px;
+    height: 105px;
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+}
+
+.banner .container .left-loginarea .login-nav h1 {
+    font-size: 25px;
+    color: #111;
+}
+
+.banner .container .left-loginarea .login-nav .download {
+    width: 150px;
+    height: 32px;
+    position: absolute;
+    bottom: 0px;
+}
+
+.banner .container .left-loginarea .login-nav .download button {
+    background: #3ce66f;
+    width: 115px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 12px;
+    border-radius: 2px;
+}
+
+.banner .container .left-loginarea .login-nav .download .qrcode {
+    height: 28px;
+    width: 28px;
+    right: 0px;
+    top: 0px;
+    position: absolute;
+}
+
+.banner .container .left-loginarea .login-nav .download .qrcode img {
+    height: 28px;
+    width: 28px;
+    border: 1px solid #b0c2b0;
+}
+
+.banner .container .left-loginarea .login-nav .download .qrcode img:hover {
+    width: 100px;
+    height: 120px;
+    background-image: url("../imgs/qrcode.png") no-repeat;
+}
+
+.banner .container .right-loginarea {
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+}
+
+.banner .container .right-loginarea .code {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    background: url("../imgs/icon-qrcode.png") 100% no-repeat;
+    background-position-x: -7px;
+    background-position-y: 1px;
+}
+
+.banner .container .right-loginarea .login-font {
+    width: 300px;
+    height: 30px;
+    position: absolute;
+    top: 20px;
+}
+
+.banner .container .right-loginarea .phone-login h1 {
+    width: 300px;
+    height: 30px;
+    font-size: 13px;
+    color: #a2a5a5
+}
+
+.banner .container .right-loginarea .login-font .left-login-font {
+    width: 150px;
+    height: 30px;
+    position: absolute;
+    left: 0px;
+    text-align: center;
+    line-height: 30px;
+}
+
+.banner .container .right-loginarea .login-font .right-login-font {
+    width: 150px;
+    height: 30px;
+    position: absolute;
+    right: 0px;
+    text-align: center;
+    line-height: 30px;
+}
+
+.banner .container .right-loginarea .phone-login {
+    width: 300px;
+    height: 185px;
+    position: absolute;
+    left: 0px;
+    top: 60px;
+}
+
+.banner .container .right-loginarea .phone-login .top-form {
+    height: 30px;
+    width: 290px;
+    margin-bottom: 15px;
+}
+
+.banner .container .right-loginarea .phone-login .buttom-form {
+    height: 30px;
+    width: 290px;
+}
+
+.banner .container .right-loginarea .phone-login input {
+    height: 30px;
+    width: 290px;
+    border-radius: 3px;
+}
+
+.banner .container .right-loginarea .phone-login button {
+    width: 280px;
+    height: 30px;
+    color: #edf4ed;
+    background-color: #1b6933;
+    border-radius: 3px;
+    margin-top: 15px;
+}
+
+.banner .container .right-loginarea .phone-login .phone-login .sbutton {
+    width: 10px;
+    height: 10px;
+}
+
+.banner .container .right-loginarea .phone-login .nlogin h1 {
+    width: 300px;
+    height: 20px;
+    margin-top: 10px;
+}
+
+.banner .container .right-loginarea .other-login {
+    width: 300px;
+    height: 30px;
+    position: absolute;
+    bottom: 0px;
+}
+
+.banner.container .right-loginarea .other-login i {
+    background: rgb(25, 134, 98);
+}

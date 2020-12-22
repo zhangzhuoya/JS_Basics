@@ -1,0 +1,28 @@
+.banner{
+    width: 300px;
+    height: 200px;
+    margin: 1em auto;
+    overflow: hidden;
+    position: relative;
+
+}
+.banner .imgs{
+    width: 900px;
+    height: 200px;
+    position: absolute;
+    right: 0px;
+    left: 0px;
+
+    
+}
+
+.banner .imgs .img{
+    width: 900px;
+    height: 200px;
+}
+.banner .imgs .img img{
+    width: 300px;
+    height: 200px;
+    float: left;
+
+}
